@@ -1,0 +1,6 @@
+https://hub.docker.com/_/consul
+https://www.consul.io/docs/agent/options.html
+https://www.consul.io/docs/connect/registration/service-registration.html
+https://www.consul.io/intro/
+
+docker exec -t <container> consul members
