@@ -17,7 +17,7 @@
 
 	<groupId>com.consul.example</groupId>
 	<artifactId>consul-pock</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>consul-pock</name>
 	<description>Demo project for Spring Boot</description>
 	<url>https://github.com/mateuspada/consul-pock</url>
@@ -26,7 +26,7 @@
 		<url>https://github.com/mateuspada/consul-pock</url>
 		<connection>scm:git:git@github.com:mateuspada/consul-pock.git</connection>
 		<developerConnection>scm:git:git@github.com:mateuspada/consul-pock.git</developerConnection>
-	  	<tag>0.0.2</tag>
+	  	<tag>HEAD</tag>
   </scm>
 
 	<developers>
