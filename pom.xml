@@ -26,7 +26,7 @@
 		<url>https://github.com/mateuspada/consul-pock</url>
 		<connection>scm:git:git@github.com:mateuspada/consul-pock.git</connection>
 		<developerConnection>scm:git:git@github.com:mateuspada/consul-pock.git</developerConnection>
-	  <tag>HEAD</tag>
+	  	<tag>HEAD</tag>
   </scm>
 
 	<developers>
@@ -84,13 +84,6 @@
 		</dependency>
 	</dependencies>
 
-	<distributionManagement>
-		<site>
-			<id>site</id>
-			<url>https://github.com/mateuspada/consul-pock</url>
-		</site>
-	</distributionManagement>
-
 	<build>
 		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
 		<testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
@@ -121,15 +114,6 @@
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<tagNameFormat>@{project.version}</tagNameFormat>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-plugin</artifactId>
-				<version>1.11.2</version>
-				<configuration>
-					<tag>${project.version}</tag>
 				</configuration>
 			</plugin>
 		</plugins>
