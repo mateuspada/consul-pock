@@ -6,6 +6,7 @@
 
     <modules>
         <module>hello-service</module>
+        <module>hello-call-service</module>
     </modules>
 
     <parent>
@@ -20,6 +21,22 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>consul-pock</name>
 	<description>Demo project for Spring Boot</description>
+	<url>https://github.com/mateuspada/consul-pock</url>
+
+	<scm>
+		<url>https://github.com/mateuspada/consul-pock</url>
+		<connection>scm:git:git@github.com:mateuspada/consul-pock.git</connection>
+		<developerConnection>scm:git:git@github.com:mateuspada/consul-pock.git</developerConnection>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Mateus Spada Leme</name>
+			<email>mateuspada@live.com</email>
+			<url>https://github.com/mateuspada</url>
+			<id>mateuspada</id>
+		</developer>
+	</developers>
 
 	<properties>
 		<java.version>11</java.version>
@@ -43,6 +60,12 @@
 				<artifactId>hello-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.consul.example</groupId>
+				<artifactId>hello-call-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -60,6 +83,13 @@
 			<artifactId>kotlin-stdlib-jdk8</artifactId>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<site>
+			<id>site</id>
+			<url>https://github.com/mateuspada/consul-pock</url>
+		</site>
+	</distributionManagement>
 
 	<build>
 		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
@@ -83,6 +113,24 @@
 						<version>${kotlin.version}</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<tagNameFormat>@{project.version}</tagNameFormat>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.11.2</version>
+				<configuration>
+					<tag>${project.version}</tag>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

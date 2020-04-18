@@ -1,11 +1,11 @@
-package com.consul.example.consulpock
+package com.consul.example.consulpock.helloservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ConsulPockApplication
+class HelloServiceApplication
 
 fun main(args: Array<String>) {
-    runApplication<ConsulPockApplication>(*args)
+    runApplication<HelloServiceApplication>(*args)
 }
