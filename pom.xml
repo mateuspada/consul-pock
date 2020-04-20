@@ -27,7 +27,7 @@
 		<connection>scm:git:git@github.com:mateuspada/consul-pock.git</connection>
 		<developerConnection>scm:git:git@github.com:mateuspada/consul-pock.git</developerConnection>
 	  	<tag>HEAD</tag>
-  </scm>
+  	</scm>
 
 	<developers>
 		<developer>
