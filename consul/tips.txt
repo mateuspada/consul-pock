@@ -2,5 +2,7 @@ https://hub.docker.com/_/consul
 https://www.consul.io/docs/agent/options.html
 https://www.consul.io/docs/connect/registration/service-registration.html
 https://www.consul.io/intro/
+https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html
+https://cloud.spring.io/spring-cloud-static/spring-cloud-consul/2.2.2.RELEASE/reference/html/#metadata-and-consul-tags
 
 docker exec -t <container> consul members

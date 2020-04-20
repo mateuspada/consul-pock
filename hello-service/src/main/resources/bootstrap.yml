@@ -1,6 +1,27 @@
+spring.application.name: hello-service
+
+server.port: 0
+
 spring.cloud.consul:
   host: localhost
   port: 8500
+  discovery:
+    instanceId:  ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    serviceName: consul-${spring.application.name}
+    tags: meu-ms-consul
+    #health-check-headers:
+      #X-Config-Token: 6442e58b-d1ea-182e-cfa5-cf9cddef0722
+  config:
+    enabled: true
+    prefix: configuration
+    defaultContext: apps
+    format: YAML
+    profileSeparator: '-'
+    #data-key: data
+    #failFast: true
+
+
+spring.profiles.active: dev
 
 #spring.cloud.consul.enabled=false
 
@@ -12,3 +33,19 @@ spring.cloud.consul:
 #spring.cloud.config.enabled=false
 #spring.cloud.consul.config.fail-fast=true
 #spring.cloud.consul.config.format=properties
+
+#management.server.port: 4452
+
+#/** Port to register the management service under (defaults to management port) */
+#spring.cloud.consul.discovery.management-port
+
+#/** Suffix to use when registering management service (defaults to "management" */
+#spring.cloud.consul.discovery.management-suffix
+
+#/** Tags to use when registering management service (defaults to "management" */
+#spring.cloud.consul.discovery.management-tags
+
+#/** Health Check */
+#management.health.consul.enabled=false
+#spring.cloud.consul.discovery.healthCheckPath=/health
+#spring.cloud.consul.discovery.healthCheckInterval=15s

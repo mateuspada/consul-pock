@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
 @RestController
-class NameController {
+class NameController(val property: Property) {
 
     @GetMapping("/name")
     fun sayName(): NameResponse {
-        return NameResponse()
+        return NameResponse(property.value)
     }
 }
 
