@@ -12,6 +12,14 @@ spring.cloud.consul:
     tags: meu-ms-consul
     #health-check-headers:
       #X-Config-Token: 6442e58b-d1ea-182e-cfa5-cf9cddef0722
+  config:
+    enabled: true
+    prefix: configuration
+    defaultContext: apps
+    format: YAML
+    profileSeparator: '-'
+    #data-key: data
+    #failFast: true
 
 #management.server.port: 4452
 

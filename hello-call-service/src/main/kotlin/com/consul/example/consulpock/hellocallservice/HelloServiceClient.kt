@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.GetMapping
 
-@FeignClient("consul-hello-service", fallback = HelloServiceFallback::class)
+@FeignClient("\${property.value}", fallback = HelloServiceFallback::class)
 interface HelloServiceClient {
     @GetMapping("/value")
     fun getValue(): ValueResponse

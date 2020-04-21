@@ -5,3 +5,4 @@ info.application:
   version: '@project.version@'
 
 feign.hystrix.enabled: true
+property.value: consul-hello-service
