@@ -1,7 +1,5 @@
 info.application:
   application-name: ${spring.application.name}
-  artifactId: '@project.artifactId@'
-  description: '@project.description@'
   groupId: '@project.groupId@'
-  name: '@project.name@'
+  artifactId: '@project.artifactId@'
   version: '@project.version@'

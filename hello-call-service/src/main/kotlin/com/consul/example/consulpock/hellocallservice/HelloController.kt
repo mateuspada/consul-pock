@@ -9,9 +9,9 @@ class HelloController(val helloServiceClient: HelloServiceClient) {
 
     @GetMapping
     fun hello(): HelloResponse {
-        val helloServiceResponse = helloServiceClient.getName()
+        val helloServiceResponse = helloServiceClient.getValue()
 
-        return HelloResponse(helloServiceResponse.name)
+        return HelloResponse(helloServiceResponse.value)
     }
 
 }

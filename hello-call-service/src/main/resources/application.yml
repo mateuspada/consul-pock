@@ -1,36 +1,7 @@
 info.application:
-  artifactId: '@project.artifactId@'
-  description: '@project.description@'
+  application-name: ${spring.application.name}
   groupId: '@project.groupId@'
-  name: '@project.name@'
+  artifactId: '@project.artifactId@'
   version: '@project.version@'
 
-server.port: 0
-
-spring:
-  application.name: '@project.artifactId@'
-  cloud.consul:
-    discovery:
-      instanceId:  ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
-      serviceName: consul-${spring.application.name}
-      tags: meu-ms-consul
-      #health-check-headers:
-        #X-Config-Token: 6442e58b-d1ea-182e-cfa5-cf9cddef0722
-
-#management.server.port: 4452
-
-#/** Port to register the management service under (defaults to management port) */
-#spring.cloud.consul.discovery.management-port
-
-#/** Suffix to use when registering management service (defaults to "management" */
-#spring.cloud.consul.discovery.management-suffix
-
-#/** Tags to use when registering management service (defaults to "management" */
-#spring.cloud.consul.discovery.management-tags
-
-#/** Health Check */
-#management.health.consul.enabled=false
-#spring.cloud.consul.discovery.healthCheckPath=/health
-#spring.cloud.consul.discovery.healthCheckInterval=15s
-
-
+feign.hystrix.enabled: true

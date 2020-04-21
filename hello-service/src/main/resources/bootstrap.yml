@@ -1,4 +1,6 @@
-spring.application.name: hello-service
+spring:
+  application.name: hello-service
+  profiles.active: dev
 
 server.port: 0
 
@@ -19,9 +21,6 @@ spring.cloud.consul:
     profileSeparator: '-'
     #data-key: data
     #failFast: true
-
-
-spring.profiles.active: dev
 
 #spring.cloud.consul.enabled=false
 
