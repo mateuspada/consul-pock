@@ -1,5 +1,12 @@
 {
   "version": "1.0",
+  "logger" : {
+    "name" : "git2consul",
+    "streams" : [{
+      "level": "trace",
+      "stream": "process.stdout"
+    }]
+  },
   "repos" : [{
     "name" : "consul-pock",
     "url" : "git@github.com:mateuspada/consul-pock.git",
