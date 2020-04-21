@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "repos" : [{
+    "name" : "consul-pock",
+    "url" : "git@github.com:mateuspada/consul-pock.git",
+    "ignore_repo_name": true,
+    "ignore_file_extension": true,
+    "include_branch_name" : false,
+    "source_root": "properties",
+    "mountpoint": "configuration",
+    "branches" : ["master"],
+    "hooks": [{
+      "type" : "polling",
+      "interval" : "1"
+    }]
+  }]
+}
