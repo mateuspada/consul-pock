@@ -6,3 +6,7 @@ https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html
 https://cloud.spring.io/spring-cloud-static/spring-cloud-consul/2.2.2.RELEASE/reference/html/#metadata-and-consul-tags
 
 docker exec -t <container> consul members
+
+https://github.com/breser/git2consul
+https://www.npmjs.com/package/git2consul-windows
+git2consul-windows --config-file git2consul.json
