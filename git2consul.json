@@ -9,7 +9,7 @@
   },
   "repos" : [{
     "name" : "consul-pock",
-    "url" : "git@github.com:mateuspada/consul-pock.git",
+    "url" : "https://github.com/mateuspada/consul-pock.git",
     "ignore_repo_name": true,
     "ignore_file_extension": true,
     "include_branch_name" : false,
